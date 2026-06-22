@@ -16,9 +16,7 @@ const allowedOrigins = ['http://localhost:5173']
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({origin: ["http://localhost:5173",
-    "https://FRONTEND.vercel.app"], 
-    credentials: true}));
+app.use(cors({origin:"http://localhost:5173", credentials: true}));
 
 //API endpoints
 app.get('/', (req, res)=> res.send("API Working"));
